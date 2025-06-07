@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 
       # Step 5: (Test) Check that the _site/index.html exists after build
-      - name: Test: Check index.html exists
+      - name: "Test: Check index.html exists"
         run: |
           if [ ! -f "_site/index.html" ]; then
             echo "index.html not found!"
@@ -54,7 +54,7 @@ jobs:
           fi
 
       # Step 6: (Test) List files in the _site directory
-      - name: Test: List built files
+      - name: "Test: List built files"
         run: ls -l _site
 
   # Deploy job: deploys the built site to GitHub Pages
@@ -71,5 +71,5 @@ jobs:
         uses: actions/deploy-pages@v1
 
       # Step 2: (Test) Output the deployment URL
-      - name: Test: Output deployment URL
+      - name: "Test: Output deployment URL"
         run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"
