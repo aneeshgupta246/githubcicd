@@ -1,4 +1,5 @@
-name: cicd
+name: ekyll-gh-pages
+# This workflow builds a Jekyll site and deploys it to GitHub Pages.
 
 on:
   push:
@@ -41,3 +42,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+        
