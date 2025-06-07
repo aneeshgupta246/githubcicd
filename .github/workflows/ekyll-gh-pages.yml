@@ -70,6 +70,6 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
 
-      # Step 2: (Test) Output the deployment URL
+      # Step 2: (Test) Output deployment URL
       - name: "Test: Output deployment URL"
         run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"
